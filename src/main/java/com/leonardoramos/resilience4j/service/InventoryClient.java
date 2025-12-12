@@ -17,7 +17,6 @@ public class InventoryClient {
         this.restTemplate = restTemplate;
     }
 
-    // A ordem importa: Retry envolve o CircuitBreaker
     @CircuitBreaker(name = "inventoryService")
     @Retry(name = "inventoryService", fallbackMethod = "finalFallback")
     public String checkStock(String productId) {

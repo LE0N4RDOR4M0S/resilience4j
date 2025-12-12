@@ -13,7 +13,6 @@ import java.util.concurrent.TimeoutException;
 
 @Service
 public class AsyncInventoryService {
-
     private final RestTemplate restTemplate;
     private final ExecutorService executorService = Executors.newFixedThreadPool(5);
 
